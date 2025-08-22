@@ -50,3 +50,55 @@ h1{
     box-shadow: 0 2px #000;
 }
 
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card{
+    background: #000000c5;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    color: #fff;
+    transition: all 200ms ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 100%;
+    transition: all 200ms ease-in-out;
+}
+
+.card:hover{
+    color: #4da52d;
+    text-shadow: 0 2px 8px #4da52d;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.card:hover img{
+    border-radius: 10px;
+}
+
+.card h3{
+    margin: 10px 0 5px;
+    font-size: 22px;
+    color: #fff;
+    font-family: cursive;
+    font-weight: bolderx;
+}
+.card p{
+    font-size: 14px;
+    color: #fff;
+}
+.card:hover p{
+    color: #fff;
+}
+
+.card strong{
+    color: #4da52d;
+}

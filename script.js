@@ -7,7 +7,7 @@ async function fetchCharacters(page){
 
     try{
     
-        const response = await fetch(`https://rickandmortyapi.com/api/character`)
+        const response = await fetch(`https://valorant-api.com/v1/agents`)
         const data = await response.json()
         console.log(data)
 
@@ -17,21 +17,21 @@ async function fetchCharacters(page){
         }
 
         resultsdiv.innerHTML = ""
-        data.results.forEach(character => {
+        data.results.forEach(agents => {
             const card = document.createElement("div")
             card.className = "card"
             card.innerHTML = `
-                <img src="${character.image}" alt="${character.name}">
-                <h3>${character.name}</h3>
-                <p><strong>Status:</strong>${character.status}</p>
-                <p><strong>Espécie:</strong>${character.species}</p>
+                <img src="${agents.image}" alt="${agents.name}">
+                <h3>${agents.name}</h3>
+                <p><strong>Status:</strong>${agents.status}</p>
+                <p><strong>Espécie:</strong>${agents.species}</p>
             `
             resultsdiv.appendChild(card)
         })
     
     } catch(error){
-
-        console.log(error)
+        
+        //console.log(error)
     
     }
 }
